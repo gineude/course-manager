@@ -2,7 +2,7 @@
 
 <hr/>
 
-<form #courseForm="ngForm">
+<form #courseForm="ngForm" *ngIf="course">
     <div class="form-group row">
         <div class="col-sm-2">
             <label class="col-form-label">Name:</label>
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="col-12">
-        <button [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary mr-4">Save</button>
-        <button [routerLink]="['/courses']" class="btn btn-secondary">Back</button>
+        <button [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary">Save</button>
+        <button [routerLink]="['/courses']" class="btn btn-secondary mx-2">Back</button>
     </div>
 </form>

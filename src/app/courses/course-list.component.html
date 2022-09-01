@@ -36,6 +36,9 @@
                 <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary" title="Edit">
                     <span class="fa fa-pencil"></span>
                 </a>
+                <button (click)="deleteById(course.id)" class="btn btn-danger mx-2">
+                    <span class="fa fa-trash"></span>
+                </button>
             </td>
         </tr>
     </tbody>
